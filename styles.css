@@ -1,0 +1,170 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#grid {
+  zoom: 0.8;
+}
+
+#keyboard {
+  width: 486px;
+  padding: 0px 10px;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+#modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+#help-button {
+  margin-top: 20px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: white;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+.keyboard-row {
+  display: flex;
+}
+.keyboard-button {
+  flex: 1;
+  padding: 12px;
+  height: 60px;
+  cursor: pointer;
+  margin: 4px;
+  border-radius: 5px;
+  background-color: #818384;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  font-size: 20px;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #3a3a3c;
+  padding: 10px;
+  margin: 3px;
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.back {
+  transition: all 1s linear;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.toggle {
+  background-color: red;
+}
+
+.spaceButton {
+  opacity: 0;
+  flex: 0.5;
+}
+
+.modal-inner {
+  position: absolute;
+  width: 400px;
+  height: 230px;
+  background-color: #121213;
+  border-radius: 10px;
+}
+
+.modal-inner h1 {
+  font-size: 20px;
+}
+
+.modal-inner button {
+  background-color: white;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.modal-inner img {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.modal-help-inner {
+  width: 500px;
+  height: 570px;
+  background-color: #121213;
+  text-align: start;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.modal-help-examples-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #3a3a3c;
+  font-weight: bold;
+  font-size: 23px;
+  margin-right: 5px;
+}
+.modal-help-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+@keyframes press {
+  from {
+    opacity: 0.5;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes enter {
+  100% {
+    transform: rotateX(360deg);
+  }
+}
